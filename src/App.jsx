@@ -1,13 +1,19 @@
 import React from 'react'
 import "./App.css";
+import Hero from './components/Hero';
+import Demo from './components/Demo';
 
 const App = () => {
   return (
-    <div className='head_text'>
-         <h3 className="text-3xl font-bold underline text-blue-500">
-      Hello world!
-    </h3>
-    </div>
+    <main>
+        <div className='main'>
+            <div className='gradient'></div>
+        </div>
+        <div className='app'>
+            <Hero />
+            <Demo />
+        </div>
+    </main>
   )
 }
 
