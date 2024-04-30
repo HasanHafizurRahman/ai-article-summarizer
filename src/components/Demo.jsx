@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import { copy, linkIcon, loader, tick } from "../assets/assets";
+import { useLazyGetSummaryQuery } from "../services/Article";
 
 const Demo = () => {
 
@@ -8,6 +8,8 @@ const Demo = () => {
     url: "",
     summary: '',
   })
+
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
   const handleSubmit = async (e) => {
     alert('submitted')
